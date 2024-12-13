@@ -1,7 +1,6 @@
 package dev.ipa;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Album {
 
@@ -18,8 +17,12 @@ public class Album {
    // if song added return true else false
     private boolean addSongs(String title, Double duration) {
         if (findSong(title) != null) {
+            Song newSong = new Song(title, duration);
+           songs.add(newSong);
+           System.out.println("Song Successfully added.");
             return true;
         } else {
+            System.out.println("Song already exists.");
             return false;
         }
     }
@@ -34,9 +37,12 @@ public class Album {
     }
 
    // if song added (trackNr. Song) return true else false
-    private boolean addToPlaylist(int trackerNumber, LinkedList<Song> songs) {
-
-        return true;
-    }
+//    private boolean addToPlaylist(int trackerNumber, LinkedList<Song> songs) {
+//
+//        for (Song song : songs)  {
+//
+//        }
+//        return true;
+//    }
 }
 
