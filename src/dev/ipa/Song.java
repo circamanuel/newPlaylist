@@ -12,11 +12,12 @@ public class Song {
        this.duration = duration;
     }
 
-    private String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    private String toString(ArrayList<Song> songs) {
-        return songs.toString();
+    @Override
+    public String toString() {
+        return title + ": " + duration;
     }
 }
